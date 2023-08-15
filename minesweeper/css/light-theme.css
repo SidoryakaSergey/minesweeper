@@ -1,0 +1,70 @@
+@import url('./dark-theme.css');
+
+body {
+  background-color: #9febee;
+}
+
+.game-ceil {
+  background-color: #2eb354;
+  cursor: url('../assets/icon/cursor-black.png'), auto;
+}
+.opened {
+  background-color: #f7e72f;
+}
+
+.hover-effect:hover {
+  background-color: #4ae76f;
+}
+
+.x1 {
+  color: #0a0a0a;
+}
+.x2 {
+  color: #990909;
+}
+.x3 {
+  color: #0ba339;
+}
+.x4 {
+  color: #7a540b;
+}
+.x5 {
+  color: #ff0000;
+}
+.x6 {
+  color: #800000;
+}
+.x7 {
+  color: #ff1493;
+}
+.x8 {
+  color: #ff00ff;
+}
+
+#theme-btn {
+  background: transparent url('../assets/img/dark.png');
+}
+
+.lapa {
+  background-image: url('../assets/icon/lapa-100-black.png');
+}
+
+.data-stats {
+  color: #000;
+}
+
+#range-input-value {
+  color: #000;
+}
+
+.top-title {
+  color: #000;
+}
+
+.last-item {
+  color: #000;
+}
+
+.footer {
+  color: #000;
+}

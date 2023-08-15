@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: #273046;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  z-index: 10;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007c;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+#game-over {
+  display: none;
+}
+
+#game-win {
+  display: none;
+}
+
+.win-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #0eb31c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.winner-img {
+  position: relative;
+  width: 300px;
+  height: 345px;
+  background: transparent url('../assets/img/winner.png') no-repeat center
+    center;
+  background-size: contain;
+}
+
+.winner-time {
+  text-align: center;
+  width: 100px;
+
+  position: absolute;
+  bottom: 31px;
+  left: 96px;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 #057005, 1px -1px 0 #057005, -1px 1px 0 #057005,
+    1px 1px 0 #057005;
+  color: #0eb31c;
+  letter-spacing: 3px;
+}
+
+.modal {
+  width: 400px;
+  height: 80px;
+  background-color: #273046;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  background: transparent url('../assets/img/mine_400px.png') no-repeat center
+    center;
+  background-size: contain;
+}
+
+.modal_btn {
+  margin-top: 60px;
+  font-weight: 700;
+  width: 150px;
+  height: 45px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+.over-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #810c0c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#new-game {
+  background-image: url('../assets/img/new.png');
+}
+#continue-game {
+  background-image: url('../assets/img/continue.png');
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game-name {
+  position: relative;
+  width: 400px;
+  height: 164px;
+  background-image: url('../assets/img/dog-collar.png');
+  background-repeat: no-repeat;
+}
+
+.player-name {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 281px;
+  height: 61px;
+  top: 103px;
+  left: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside-left {
+  order: 1;
+}
+
+.aside-right {
+  order: 3;
+}
+
+.game-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-title {
+  color: #fff;
+}
+
+.last-item {
+  color: #fff;
+}
+
+.setting {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#theme-btn {
+  width: 64px;
+  height: 64px;
+  background: transparent url('../assets/img/light.png');
+  border: none;
+}
+
+.sound {
+  width: 64px;
+  height: 74px;
+  background: transparent url('../assets/img/sound-on.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.sound-off {
+  background: transparent url('../assets/img/sound-off.png');
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.main {
+  order: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.game-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  gap: 20px;
+}
+
+.game-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-setting {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#range-input-value {
+  color: #fff;
+  font-weight: 700;
+}
+
+#size-table {
+  width: 70px;
+  border-radius: 40%;
+  padding: 3px;
+  text-align: center;
+}
+
+.new-game-btn {
+  font-weight: 700;
+  width: 90px;
+  height: 35px;
+  background-color: transparent;
+  background-image: url('../assets/img/newgame_bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+.count-mines {
+  display: flex;
+  align-items: center;
+}
+
+.game-stats {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-direction: column;
+}
+
+.icon-stats {
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/icon/lapa-100.png');
+  background-size: contain;
+}
+
+.clock {
+  background-image: url('../assets/icon/clock-100.png');
+}
+.lapa {
+  background-image: url('../assets/icon/lapa-100.png');
+}
+.head {
+  background-image: url('../assets/icon/dog-head-100.png');
+}
+
+.header-stats,
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.data-stats {
+  font-weight: 700;
+  width: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.wrapper-game {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.game-row {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.game-ceil {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #3f5c0c;
+  cursor: url('../assets/icon/cursor.png'), auto;
+  user-select: none;
+}
+
+.hover-effect:hover {
+  background-color: #72930e;
+  transition: background-color 0.3 ease;
+}
+
+.opened {
+  background-color: #2b1d05;
+  cursor: unset;
+}
+
+.ceil-15 {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+}
+
+.ceil-25 {
+  width: 22px;
+  height: 22px;
+  font-size: 1rem;
+}
+
+.mine {
+  background-image: url('../assets/img/mine_50px.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dog {
+  background-image: url('../assets/img/dog_50px.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.explosion {
+  background-color: #ff0000;
+}
+
+.x1 {
+  color: #ffffff;
+}
+.x2 {
+  color: #ffff00;
+}
+.x3 {
+  color: #0ba339;
+}
+.x4 {
+  color: #ffa500;
+}
+.x5 {
+  color: #ff0000;
+}
+.x6 {
+  color: #800000;
+}
+.x7 {
+  color: #ff1493;
+}
+.x8 {
+  color: #ff00ff;
+}
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.footer {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 920px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .dog {
+    background-image: url('../assets/icon/dog-head-100.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .main {
+    order: 1;
+  }
+
+  .aside {
+    order: 2;
+  }
+
+  .ceil-25 {
+    width: 18px;
+    height: 18px;
+    font-size: 1rem;
+  }
+
+  .game-row {
+    gap: 1px;
+  }
+}
