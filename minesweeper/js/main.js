@@ -1,5 +1,4 @@
 import {
-  loadHTML,
   isFirstClick,
   setFirstClick,
   startGame,
@@ -32,7 +31,6 @@ import {
   loadLastList,
 } from './functions.js';
 
-loadHTML();
 loadLastList();
 writeLastList();
 
